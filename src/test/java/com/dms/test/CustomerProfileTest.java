@@ -46,6 +46,7 @@ public class CustomerProfileTest {
         when(customerProfileRepo.findAll()).thenReturn(customerProfiles);
         List<CustomerProfile> setCustomerProfile=profile.getAll();
         assertEquals(2,setCustomerProfile.size());
+
         verify(customerProfileRepo,times(1)).findAll();
     }
 
